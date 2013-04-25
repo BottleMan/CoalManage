@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/up"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setbar_bg" >
+
+            <!-- First Line -->
+
+            <TextView
+                android:id="@+id/txt_ctype"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:gravity="center"
+                android:text="煤种"
+                android:textSize="20dip" />
+
+            <Spinner
+                android:id="@+id/spinner_ctype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/txt_ctype" />
+
+            <TextView
+                android:id="@+id/txt_send_com"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/spinner_ctype"
+                android:gravity="center"
+                android:text="发货公司"
+                android:textSize="20dip" />
+
+            <Spinner
+                android:id="@+id/spinner_send_com"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/txt_send_com" />
+
+            <TextView
+                android:id="@+id/txt_receive_com"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/spinner_send_com"
+                android:gravity="center"
+                android:text="收货公司"
+                android:textSize="20dip" />
+
+            <Spinner
+                android:id="@+id/spinner_recerve_com"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/txt_receive_com" />
+
+            <TextView
+                android:id="@+id/txt_carrier"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/spinner_recerve_com"
+                android:gravity="center"
+                android:text="承运公司"
+                android:textSize="20dip" />
+
+            <Spinner
+                android:id="@+id/spinner_carrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/txt_carrier" />
+
+            <TextView
+                android:id="@+id/txt_arrive"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/spinner_carrier"
+                android:gravity="center"
+                android:text="到站"
+                android:textSize="20dip" />
+
+            <Spinner
+                android:id="@+id/spinner_arrive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/txt_arrive" />
+            <!-- First Line(END) -->
+            <!-- Second Line(Start) -->
+
+            <TextView
+                android:id="@+id/txt_operater"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_ctype"
+                android:layout_margin="10dip"
+                android:gravity="center"
+                android:text="操作人"
+                android:textSize="20dip" />
+
+            <Spinner
+                android:id="@+id/spinner_operater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_ctype"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@+id/txt_operater" />
+
+            <Spinner
+                android:id="@+id/spinner_yaer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_ctype"
+                android:layout_marginLeft="40dip"
+                android:layout_toRightOf="@+id/spinner_operater" />
+
+            <TextView
+                android:id="@+id/txt_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_ctype"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/spinner_yaer"
+                android:gravity="center"
+                android:text="年"
+                android:textSize="20dip" />
+
+            <Spinner
+                android:id="@+id/spinner_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_ctype"
+                android:layout_toRightOf="@+id/txt_year" />
+
+            <TextView
+                android:id="@+id/txt_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_ctype"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/spinner_month"
+                android:gravity="center"
+                android:text="月"
+                android:textSize="20dip" />
+
+            <Spinner
+                android:id="@+id/spinner_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_ctype"
+                android:layout_toRightOf="@+id/txt_month" />
+
+            <TextView
+                android:id="@+id/txt_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_ctype"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/spinner_day"
+                android:gravity="center"
+                android:text="日     至"
+                android:textSize="20dip" />
+
+            <Spinner
+                android:id="@+id/spinner_yaer2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_ctype"
+                android:layout_toRightOf="@+id/txt_day" />
+
+            <TextView
+                android:id="@+id/txt_year2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_ctype"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/spinner_yaer2"
+                android:gravity="center"
+                android:text="年"
+                android:textSize="20dip" />
+
+            <Spinner
+                android:id="@+id/spinner_month2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_ctype"
+                android:layout_toRightOf="@+id/txt_year2" />
+
+            <TextView
+                android:id="@+id/txt_month2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_ctype"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/spinner_month2"
+                android:gravity="center"
+                android:text="月"
+                android:textSize="20dip" />
+
+            <Spinner
+                android:id="@+id/spinner_day2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_ctype"
+                android:layout_toRightOf="@+id/txt_month2" />
+
+            <TextView
+                android:id="@+id/txt_day2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_ctype"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/spinner_day2"
+                android:gravity="center"
+                android:text="日"
+                android:textSize="20dip" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="5dip"
+            android:layout_toRightOf="@+id/left"
+            android:text="查看"
+            android:textSize="20dip" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_confirm"
+            android:layout_margin="10dip"
+            android:layout_toRightOf="@+id/left"
+            android:text="返回"
+            android:textSize="20dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/up"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/setbar_bg" >
+
+        <TextView
+            android:id="@+id/txt_senddate"
+            android:layout_width="400dip"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setbar_bg"
+            android:gravity="center"
+            android:text="发货日期"
+            android:textSize="30dip" />
+
+        <TextView
+            android:id="@+id/txt_btotal"
+            android:layout_width="600dip"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/txt_senddate"
+            android:background="@drawable/setbar_bg"
+            android:gravity="center"
+            android:text="本次业务总量(吨)"
+            android:textSize="30dip" />
+
+        <ListView
+            android:id="@+id/mid_listView"
+            android:layout_width="fill_parent"
+            android:layout_height="220dip"
+            android:layout_below="@+id/txt_senddate"
+            android:background="@drawable/setbar_bg" >
+        </ListView>
+
+        <!-- 合计 -->
+
+        <TextView
+            android:id="@+id/txt_total"
+            android:layout_width="400dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mid_listView"
+            android:background="@drawable/setbar_bg"
+            android:gravity="center"
+            android:text="合计"
+            android:textSize="30dip" />
+
+        <TextView
+            android:id="@+id/txt_total_netweight"
+            android:layout_width="300dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mid_listView"
+            android:layout_toRightOf="@+id/txt_total"
+            android:background="@drawable/setbar_bg"
+            android:gravity="center"
+            android:text="净重 12345"
+            android:textSize="30dip" />
+
+        <TextView
+            android:id="@+id/txt_total_weight"
+            android:layout_width="300dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mid_listView"
+            android:layout_toRightOf="@+id/txt_total_netweight"
+            android:background="@drawable/setbar_bg"
+            android:gravity="center"
+            android:text="毛重 12345"
+            android:textSize="30dip" />
+
+        <!-- 合计（END） -->
+        <!-- 下方 （Start） -->
+
+        <com.bottle.coalmanage.MyMarquee
+            android:id="@+id/txt_dctype"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_total"
+            android:background="@drawable/setbar_bg"
+            android:gravity="center"
+            android:text="煤种：动力煤"
+            android:textSize="30dip" />
+
+        <com.bottle.coalmanage.MyMarquee
+            android:id="@+id/txt_dsend_com"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_total"
+            android:layout_toRightOf="@+id/txt_dctype"
+            android:background="@drawable/setbar_bg"
+            android:ellipsize="marquee"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="发货公司：XX公司"
+            android:textSize="30dip" />
+
+        <com.bottle.coalmanage.MyMarquee
+            android:id="@+id/txt_dreceive_com"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_total"
+            android:layout_toRightOf="@+id/txt_dsend_com"
+            android:background="@drawable/setbar_bg"
+            android:ellipsize="marquee"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="收货公司：XX公司"
+            android:textSize="30dip" />
+
+        <com.bottle.coalmanage.MyMarquee
+            android:id="@+id/txt_dcarrier"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_total"
+            android:layout_toRightOf="@+id/txt_dreceive_com"
+            android:background="@drawable/setbar_bg"
+            android:ellipsize="marquee"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="承运公司：XX公司"
+            android:textSize="30dip" />
+
+        <com.bottle.coalmanage.MyMarquee
+            android:id="@+id/txt_darrive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_total"
+            android:layout_toRightOf="@+id/txt_dcarrier"
+            android:background="@drawable/setbar_bg"
+            android:ellipsize="marquee"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="到站：XX站"
+            android:textSize="30dip" />
+
+        <!-- listView Title(start) -->
+
+        <com.bottle.coalmanage.MyMarquee
+            android:id="@+id/txt_ddate"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_dctype"
+            android:background="@drawable/setbar_bg"
+            android:gravity="center"
+            android:text="发货日期"
+            android:textSize="30dip" />
+
+        <com.bottle.coalmanage.MyMarquee
+            android:id="@+id/txt_dcarNum"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_dctype"
+            android:layout_toRightOf="@+id/txt_ddate"
+            android:background="@drawable/setbar_bg"
+            android:ellipsize="marquee"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="车牌号码"
+            android:textSize="30dip" />
+
+        <com.bottle.coalmanage.MyMarquee
+            android:id="@+id/txt_ddnet_weight"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_dctype"
+            android:layout_toRightOf="@+id/txt_dcarNum"
+            android:background="@drawable/setbar_bg"
+            android:ellipsize="marquee"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="净重量(t)"
+            android:textSize="30dip" />
+
+        <com.bottle.coalmanage.MyMarquee
+            android:id="@+id/txt_ddcore"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_dctype"
+            android:layout_toRightOf="@+id/txt_ddnet_weight"
+            android:background="@drawable/setbar_bg"
+            android:ellipsize="marquee"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="芯片(个)"
+            android:textSize="30dip" />
+
+        <com.bottle.coalmanage.MyMarquee
+            android:id="@+id/txt_ddweight"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_dctype"
+            android:layout_toRightOf="@+id/txt_ddcore"
+            android:background="@drawable/setbar_bg"
+            android:ellipsize="marquee"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="毛重量(t)"
+            android:textSize="30dip" />
+
+        <com.bottle.coalmanage.MyMarquee
+            android:id="@+id/txt_ddoperator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_dctype"
+            android:layout_toRightOf="@+id/txt_ddweight"
+            android:background="@drawable/setbar_bg"
+            android:ellipsize="marquee"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="操作员"
+            android:textSize="30dip" />
+
+        <!-- down Listview -->
+
+        <ListView
+            android:id="@+id/d_listView"
+            android:layout_width="fill_parent"
+            android:layout_height="200dip"
+            android:layout_below="@+id/txt_ddate" >
+        </ListView>
+
+        <!-- Down Total -->
+
+        <com.bottle.coalmanage.MyMarquee
+            android:id="@+id/txt_dtotal"
+            android:layout_width="400dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/d_listView"
+            android:background="@drawable/setbar_bg"
+            android:gravity="center"
+            android:text="合计"
+            android:textSize="30dip" />
+
+        <com.bottle.coalmanage.MyMarquee
+            android:id="@+id/txt_ddnet_weight_total"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/d_listView"
+            android:layout_toRightOf="@+id/txt_dtotal"
+            android:background="@drawable/setbar_bg"
+            android:ellipsize="marquee"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="10000"
+            android:textSize="30dip" />
+
+        <com.bottle.coalmanage.MyMarquee
+            android:id="@+id/txt_ddcore_total"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/d_listView"
+            android:layout_toRightOf="@+id/txt_ddnet_weight_total"
+            android:background="@drawable/setbar_bg"
+            android:ellipsize="marquee"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="120"
+            android:textSize="30dip" />
+
+        <com.bottle.coalmanage.MyMarquee
+            android:id="@+id/txt_ddweight_total"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/d_listView"
+            android:layout_toRightOf="@+id/txt_ddcore_total"
+            android:background="@drawable/setbar_bg"
+            android:ellipsize="marquee"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="9000"
+            android:textSize="30dip" />
+
+        <com.bottle.coalmanage.MyMarquee
+            android:id="@+id/txt_ddoperator_total"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/d_listView"
+            android:layout_toRightOf="@+id/txt_ddweight_total"
+            android:background="@drawable/setbar_bg"
+            android:ellipsize="marquee"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="  "
+            android:textSize="30dip" />
+    </RelativeLayout>
+
+</RelativeLayout>

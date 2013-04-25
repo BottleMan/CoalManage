@@ -1,0 +1,560 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setbar_bg"
+            android:paddingBottom="10dip" >
+
+            <!-- First Line（开始） -->
+
+            <TextView
+                android:id="@+id/txt_ctype"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:gravity="center"
+                android:text="煤种"
+                android:textSize="20dip" />
+
+            <Spinner
+                android:id="@+id/spinner_ctype"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/txt_ctype"
+                android:textSize="20dip" />
+
+            <TextView
+                android:id="@+id/txt_sendcom"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/spinner_ctype"
+                android:gravity="center"
+                android:text="发货公司"
+                android:textSize="20dip" />
+
+            <Spinner
+                android:id="@+id/spinner_sendcom"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/txt_sendcom"
+                android:textSize="20dip" />
+            <!-- First Line（结束） -->
+            <!-- Second Line（开始） -->
+
+            <TextView
+                android:id="@+id/txt_arrive"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_ctype"
+                android:layout_margin="10dip"
+                android:gravity="center"
+                android:text="到站"
+                android:textSize="20dip" />
+
+            <Spinner
+                android:id="@+id/spinner_arrive"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_ctype"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/txt_ctype"
+                android:textSize="20dip" />
+
+            <TextView
+                android:id="@+id/txt_receivecom"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_ctype"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/spinner_ctype"
+                android:gravity="center"
+                android:text="收货公司"
+                android:textSize="20dip" />
+
+            <Spinner
+                android:id="@+id/spinner_receivecom"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_ctype"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/txt_sendcom"
+                android:textSize="20dip" />
+            <!-- Second Line（结束） -->
+            <!-- Third Line（开始） -->
+
+            <TextView
+                android:id="@+id/txt_operator"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_arrive"
+                android:layout_margin="10dip"
+                android:gravity="center"
+                android:text="操作人"
+                android:textSize="20dip" />
+
+            <Spinner
+                android:id="@+id/spinner_operator"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_arrive"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/txt_arrive"
+                android:textSize="20dip" />
+
+            <TextView
+                android:id="@+id/txt_carrier"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_arrive"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/spinner_ctype"
+                android:gravity="center"
+                android:text="承运公司"
+                android:textSize="20dip" />
+
+            <Spinner
+                android:id="@+id/spinner_carrier"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_arrive"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/txt_sendcom"
+                android:textSize="20dip" />
+            <!-- Third Line（结束） -->
+            <!-- Fourth Line （开始） -->
+
+            <TextView
+                android:id="@+id/txt_carNum"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_operator"
+                android:layout_margin="10dip"
+                android:gravity="center"
+                android:text="车牌号码"
+                android:textSize="20dip" />
+
+            <Spinner
+                android:id="@+id/spinner_carNumProvince"
+                android:layout_width="70dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_operator"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/txt_carNum"
+                android:textSize="20dip" />
+
+            <Spinner
+                android:id="@+id/spinner_carNumCode"
+                android:layout_width="70dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_operator"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/spinner_carNumProvince"
+                android:textSize="20dip" />
+
+            <EditText
+                android:id="@+id/editText_carNum"
+                android:layout_width="120dip"
+                android:layout_height="50dip"
+                android:layout_below="@+id/spinner_operator"
+                android:layout_marginLeft="-30dip"
+                android:layout_toRightOf="@+id/txt_carrier"
+                android:hint="输入数字"
+                android:inputType="number" >
+            </EditText>
+            <!-- Fourth Line （结束） -->
+            <!-- Fifth Line （开始） -->
+
+            <EditText
+                android:id="@+id/editText_Net_Weight"
+                android:layout_width="120dip"
+                android:layout_height="50dip"
+                android:layout_below="@+id/spinner_carNumProvince"
+                android:layout_toRightOf="@+id/spinner_carNumProvince"
+                android:hint="输入数字"
+                android:inputType="number" >
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editText_Net_Weight"
+                android:layout_alignBottom="@+id/editText_Net_Weight"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/editText_Net_Weight"
+                android:text="吨"
+                android:textSize="20dip" />
+            <!-- Fifth Line （结束） -->
+            <!-- sixth Line（开始） -->
+
+            <EditText
+                android:id="@+id/editText_Weight"
+                android:layout_width="120dip"
+                android:layout_height="50dip"
+                android:layout_below="@+id/editText_Net_Weight"
+                android:layout_marginTop="10dip"
+                android:layout_toRightOf="@+id/spinner_carNumProvince"
+                android:hint="输入数字"
+                android:inputType="number" >
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editText_Weight"
+                android:layout_alignBottom="@+id/editText_Weight"
+                android:layout_margin="10dip"
+                android:layout_toRightOf="@+id/editText_Weight"
+                android:text="吨"
+                android:textSize="20dip" />
+
+            <TextView
+                android:id="@+id/txt_net_weight"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editText_Net_Weight"
+                android:layout_alignBottom="@+id/editText_Net_Weight"
+                android:layout_alignLeft="@+id/txt_carNum"
+                android:layout_margin="10dip"
+                android:gravity="center"
+                android:text="净重量"
+                android:textSize="20dip" />
+
+            <TextView
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editText_Weight"
+                android:layout_alignBottom="@+id/editText_Weight"
+                android:layout_alignLeft="@+id/txt_carNum"
+                android:layout_margin="10dip"
+                android:gravity="center"
+                android:text="毛重量"
+                android:textSize="20dip" />
+        </RelativeLayout>
+
+        <!-- sixth Line（结束） -->
+
+
+        <!-- 左下（开始） -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/setbar_bg"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btn_write"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dip"
+                android:text="写入信息"
+                android:textSize="15dip" />
+
+            <Button
+                android:id="@+id/btn_new"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_write"
+                android:layout_margin="20dip"
+                android:text="开始新业务"
+                android:textSize="15dip" />
+
+            <Button
+                android:id="@+id/btn_recycle"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_new"
+                android:layout_margin="20dip"
+                android:text="垃圾箱"
+                android:textSize="15dip" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- 左下（结束） -->
+
+
+    <!-- 右上（开始） -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/setbar_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="本期煤炭发运业务明细"
+                android:textSize="30dip" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="150dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="煤种"
+                android:textSize="25dip" />
+
+            <TextView
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="动力煤"
+                android:textSize="25dip" />
+
+            <TextView
+                android:layout_width="150dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="发货公司"
+                android:textSize="25dip" />
+
+            <TextView
+                android:layout_width="150dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="SS煤矿"
+                android:textSize="25dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="150dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="收货公司"
+                android:textSize="25dip" />
+
+            <TextView
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="A公司"
+                android:textSize="25dip" />
+
+            <TextView
+                android:layout_width="150dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="承运公司"
+                android:textSize="25dip" />
+
+            <TextView
+                android:layout_width="150dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="BB运输公司"
+                android:textSize="25dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="150dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="到站"
+                android:textSize="25dip" />
+
+            <TextView
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="天津港"
+                android:textSize="25dip" />
+        </LinearLayout>
+
+        <!-- 右上（结束） -->
+
+
+        <!-- 右中（开始） -->
+        <!-- 菜单 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="160dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="车牌号码"
+                android:textSize="25dip" />
+
+            <TextView
+                android:layout_width="160dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="发货日期"
+                android:textSize="25dip" />
+
+            <TextView
+                android:layout_width="160dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="煤炭重量(t)"
+                android:textSize="25dip" />
+
+            <TextView
+                android:layout_width="160dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="芯片(个)"
+                android:textSize="25dip" />
+
+            <TextView
+                android:layout_width="160dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="毛重量(t)"
+                android:textSize="25dip" />
+        </LinearLayout>
+
+        <!-- 中间滑动部分 （开始） -->
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="802dp"
+            android:layout_height="300dip"
+            android:background="@drawable/setbar_bg" >
+        </ListView>
+        <!-- 中间滑动部分 （结束） -->
+        <!-- 合计 （开始） -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="320dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="合计"
+                android:textSize="25dip" />
+
+            <TextView
+                android:layout_width="160dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="1234"
+                android:textSize="25dip" />
+
+            <TextView
+                android:layout_width="160dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="60"
+                android:textSize="25dip" />
+
+            <TextView
+                android:layout_width="160dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="1000"
+                android:textSize="25dip" />
+        </LinearLayout>
+
+        <!-- 合计 （结束） -->
+        <!-- 右中（结束） -->
+
+
+        <!-- 右下（开始） -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btn_export"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dip"
+                android:text="导出"
+                android:textSize="15dip" />
+
+            <Button
+                android:id="@+id/btn_history"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dip"
+                android:layout_toRightOf="@+id/btn_export"
+                android:text="查看历史业务"
+                android:textSize="15dip" />
+
+            <Spinner
+                android:id="@+id/spinner_history_com"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dip"
+                android:layout_toRightOf="@+id/btn_history" />
+
+            <Button
+                android:id="@+id/btn_folder"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_export"
+                android:layout_margin="20dip"
+                android:text="文件夹"
+                android:textSize="15dip" />
+
+            <Button
+                android:id="@+id/btn_return"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_history"
+                android:layout_margin="20dip"
+                android:layout_toRightOf="@+id/btn_folder"
+                android:text="返回当前业务"
+                android:textSize="15dip" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
